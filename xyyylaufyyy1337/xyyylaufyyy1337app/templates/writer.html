@@ -1,0 +1,20 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Writer</title>
+        </head>
+        <body>
+            <h1>Writer</h1>
+            <h3>{{ title }}</h3>
+            {% if writer %}
+            <ul>
+                {% for writer_ in writer %}
+                <li>{{ writer_.writer }}</li>
+                <p>{{ writer_.bio }}</p>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <h1>Halaman Kosong</h1>
+            {% endif %}
+        </body>
+    </html>
